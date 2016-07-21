@@ -1,0 +1,30 @@
+public class Test12
+{
+	/**
+	* 补码对称规律： - n  = ~ n + 1
+	*/
+	public static void main(String[] args){
+		//极值情况会出现问题 ，极值和-8 ， 7 情况下，取反加1还是本身，二进制数相同，而其他情况下，二进制位数不同
+		int n0 =0 ;
+		int m0= ~n0 + 1 ;
+		System.out.println(m0) ;     //结果是0
+		
+		int n1 = - 15 ;   
+		int m1 = ~ n1 + 1 ;
+		System.out.println(m1) ;   //结果是15
+
+		int n2 = - 8 ;   
+		int m2 = ~ n2 + 1 ;
+		System.out.println(m2) ;   //结果是8
+
+		//取反
+		int n3 = 2 ;
+		int m3 = ~n3 ;
+		System.out.println(m3) ;   //-3  ,正数取反是加1添负号
+
+		int n4 = -5 ;
+	    int m4 = ~n4 ;
+		System.out.println(m4) ;   //4,  负数取反是减一添负号
+
+	}
+}
